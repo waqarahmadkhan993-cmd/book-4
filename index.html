@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book professional digital services with BookEase.">
+  <title>BookEase | Digital Services</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="header">
+    <a class="logo" href="#" aria-label="BookEase home">BookEase</a>
+    <button id="menu-toggle" class="menu-toggle"
+      aria-expanded="false" aria-controls="main-nav">
+      Menu
+    </button>
+    <nav id="main-nav" class="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book a Service</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <p class="eyebrow">Simple. Smart. Professional.</p>
+      <h1>Book Your Digital Service Easily</h1>
+      <p>Choose a service, select a suitable date and submit your booking request.</p>
+      <a class="button" href="#services">Explore Services</a>
+    </section>
+
+    <section class="section" id="services">
+      <h2>Our Services</h2>
+      <p>Choose a category to find the service you need.</p>
+
+      <div class="filter-area">
+        <label for="service-filter">Filter services</label>
+        <select id="service-filter">
+          <option value="all">All Services</option>
+          <option value="design">Graphic Design</option>
+          <option value="web">Web Development</option>
+          <option value="consulting">Consultation</option>
+        </select>
+      </div>
+
+      <p id="filter-status" class="status" role="status" aria-live="polite"></p>
+
+      <div class="service-grid" id="service-list">
+        <article class="service-card" data-category="design">
+          <h3>Graphic Design</h3>
+          <p>Creative designs for brands and social media.</p>
+          <button class="button choose-service" data-service="Graphic Design">
+            Choose Service
+          </button>
+        </article>
+
+        <article class="service-card" data-category="web">
+          <h3>Website Development</h3>
+          <p>Responsive websites for personal and business needs.</p>
+          <button class="button choose-service" data-service="Website Development">
+            Choose Service
+          </button>
+        </article>
+
+        <article class="service-card" data-category="consulting">
+          <h3>AI Consultation</h3>
+          <p>Guidance on AI tools and digital workflows.</p>
+          <button class="button choose-service" data-service="AI Consultation">
+            Choose Service
+          </button>
+        </article>
+
+        <article class="service-card" data-category="consulting">
+          <h3>Digital Consultation</h3>
+          <p>Practical guidance for your digital projects.</p>
+          <button class="button choose-service" data-service="Digital Consultation">
+            Choose Service
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="booking">
+      <h2>Book a Service</h2>
+      <p>Complete the form below. Fields marked * are required.</p>
+
+      <form id="booking-form" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input id="name" name="name" type="text"
+            autocomplete="name" required aria-describedby="name-error">
+          <span class="error" id="name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input id="email" name="email" type="email"
+            autocomplete="email" required aria-describedby="email-error">
+          <span class="error" id="email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" type="tel"
+            autocomplete="tel" placeholder="03XXXXXXXXX"
+            required aria-describedby="phone-error">
+          <span class="error" id="phone-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Select Service *</label>
+          <select id="service" name="service" required
+            aria-describedby="service-error">
+            <option value="">Choose a service</option>
+            <option>Graphic Design</option>
+            <option>Website Development</option>
+            <option>AI Consultation</option>
+            <option>Digital Consultation</option>
+          </select>
+          <span class="error" id="service-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date *</label>
+          <input id="date" name="date" type="date"
+            required aria-describedby="date-error">
+          <span class="error" id="date-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Preferred Time *</label>
+          <input id="time" name="time" type="time"
+            required aria-describedby="time-error">
+          <span class="error" id="time-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Additional Notes (Optional)</label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+
+        <button class="button submit-button" type="submit">
+          Submit Booking Request
+        </button>
+      </form>
+
+      <div id="confirmation" class="confirmation" role="status"
+        aria-live="polite" aria-atomic="true" tabindex="-1" hidden>
+        <h3>Booking Request Submitted!</h3>
+        <p id="confirmation-message"></p>
+        <p><strong>Note:</strong> This is a simulated confirmation for your project.
+          No real booking has been made.</p>
+        <button id="new-booking" class="button" type="button">
+          Make Another Booking
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 BookEase. Created for the Day 4 internship task.</p>
+  </footer>
+</body>
+</html>
